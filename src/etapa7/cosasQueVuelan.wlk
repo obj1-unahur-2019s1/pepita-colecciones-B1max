@@ -21,7 +21,7 @@ object pepucha {
   var kmVoladosConPilas = 0
   var kmVoladosSinPilas = 0
 
-  method volar(km) { 
+  method volar(km) {
     if (cuantoComioDesdeUltimoVuelo > 100) {
       kmVoladosConPilas += km
     } else {
