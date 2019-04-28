@@ -3,7 +3,7 @@ import masAves.*
 import pepita.*
 import roque.*
 import susana.*
-
+import instituto.*
 test "pepita puede volar" {
 	pepita.comer(alpiste,10)
 	assert.equals(true, pepita.puedeVolar(29))
@@ -24,4 +24,33 @@ test "pepon puede volar" {
 
 test "pipa puede volar"{
 	assert.equals(true, pipa.puedeVolar(29))
+}
+
+test "instituto metodo buenAmbiente"{
+	instituto.contratar(roque)
+	instituto.contratar(susana)
+	
+	susana.tuPupiloEs(pepon)
+	roque.agregarPupilo(pepita)
+	roque.agregarPupilo(pipa)
+	
+	//pepita.comer(alpiste,100)
+	pepon.comer(alpiste,2)
+	//pipa.comer(alpiste,100)
+	
+	assert.equals(true, instituto.buenAmbiente())
+}
+test "instituto metodo elMejor"{
+	instituto.contratar(roque)
+	instituto.contratar(susana)
+	
+	susana.tuPupiloEs(pepon)
+	roque.agregarPupilo(pepita)
+	roque.agregarPupilo(pipa)
+	
+	//pepita.comer(alpiste,100)
+	pepon.comer(alpiste,100)
+	//pipa.comer(alpiste,100) /*retorna true siempre*/
+	assert.that(instituto.mejoresEstudiantes().contains(pipa))
+	
 }

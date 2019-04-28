@@ -18,4 +18,7 @@ object susana {
 		pupilo.volar(20)
 	} 
 	method estaFeliz(){return pupilo.puedeVolar(5)}
+	method elMejor(){
+		return pupilo
+	}
 }  
